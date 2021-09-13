@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+
+          *{ 
+              padding:0;
+              margin:0;
+              list-style-type: none;
+        }
+        ul li{
+           position:relative;
+           width:400px;
+           height:20px;
+           background-color: blanchedalmond;
+           border-radius: 20px;
+           margin:40px 0 ;
+           padding: 1px;
+           box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+        }
+        h3{
+            position: absolute;
+            bottom:100%;
+        }
+        .bar{
+            display:block;
+            height:100%;
+            border-radius: 30px;
+            box-sizing:border-box ;
+            background-image: gradient(linear, left top, left bottom, from(#f0bb4b), to(#d9aa44));
+        }
+        .query{
+            width:60%;
+            background-color: rgba(137, 43, 226, 0.692);
+            animation: query 2s ease-in-out;
+        }
+        .graphic{
+            width:100%;
+            background-color: rgba(118, 248, 118, 0.473);
+            animation: graphic 2s ease-in-out;
+        }
+        .baby{
+            width:30%;
+            background-color: rgba(255, 198, 123, 0.521);
+            animation: baby 2s ease-in-out;
+        }
+        @keyframes graphic{
+            0%{
+               width:0px;
+            }
+
+            100%{
+                width: 100%;
+            }
+        }
+        @keyframes query {
+            0%{
+               width:0px;
+            }
+
+            100%{
+                width: 60%;
+            }
+        }
+        @keyframes baby {
+            0%{
+               width:0px;
+            }
+
+            100%{
+                width: 30%;
+            }
+        }
+      </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <span class="bar graphic"></span>
+        <h3>graphic design</h3>
+        </li>
+        <li><span class="bar query"></span>
+            <h3>query</h3></li>
+        <li><span class="bar baby"></span>
+            <h3>baby</h3></li>
+    </ul>
+</body>
+</html>

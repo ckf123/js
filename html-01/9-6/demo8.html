@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* column-count: 5; */
+            /* column-width: 200px; */
+            /* display:flex;
+           justify-content:space-around; */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .col {
+            /* flex:1 1 auto; */
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="col">1</div>
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">2</div>
+        <div class="col">2</div>
+        <div class="col">2</div>
+        <div class="col">2</div>
+    </div>
+</body>
+
+</html>

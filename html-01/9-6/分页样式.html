@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background: rgb(156, 154, 154);
+            text-align:center;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .pagination{
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .pagination li{
+            display:inline;
+        }
+        .pagination li a{
+            float:left;
+            width:40px;
+            height:40px;
+            border: 1px solid transparent;
+            border-left-width:0;
+            text-align: center;
+            line-height: 40px;
+            margin-left:-1;
+            color:black;
+            background-color: white;
+        }
+        /* model-1 */
+        .model-1 li:first-child a
+        {
+            border-left-width:  1px;
+            border-radius: 5px 0px 0 5px;
+            background-color: white;
+        } 
+        .model-1 li:last-child a{
+            border-radius: 0px 5px 5px 0;
+        }
+        .model-1 a:hover{
+             background: rgb(207, 198, 198);
+         }
+        .model-1 a.active{
+             background:rgb(59, 59, 230) ;
+             color:#fff;
+             border-color:rgb(59, 59, 230);
+        }
+        
+        /* model-2 */
+
+        .model-2 li:first-child a{
+           border-radius: 50% 0 0 50%;
+        }
+        .model-2 li:last-child a{
+           border-radius: 0 50% 50% 0;
+        }
+        .model-2 a:hover{
+             background: rgb(207, 198, 198);
+             color:red;
+         }
+        .model-2 a.active{
+             background:red ;
+             color:#fff;
+             border-color:red;
+        }
+        /* model-3 */
+        .model-3 li a{
+            background-color: rgb(156, 154, 154);
+            border-radius: 50%;
+            margin-left:3px;
+            color:#fff;
+        }
+        .model-3 a:hover{
+             background: rgb(44, 134, 41);
+             color:white;
+         }
+        .model-3 a.active{
+             background:rgb(53, 156, 49) ;
+             color:#fff;
+             border-color:rgb(52, 156, 48);
+        }
+        /* model-4 */
+        .model-4 li a{
+            border-radius: 50%;
+            background-color: rgb(245, 227, 71);
+            margin-left:8px;
+            color:#fff;
+        }
+        .model-4 li:first-child a{
+            width:120px;
+           border-radius: 50px 0 0 50px;
+        }
+        .model-4 li:last-child a{
+            width:100px;
+           border-radius: 0 50px 50px 0;
+        }
+         .model-4 a:hover,.model-4 a.active{
+             background:rgb(235, 172, 55);
+             color:#fff;
+        }
+        /* model-5 */
+        .model-5{
+            position: relative;
+        }
+        .model-5 li a{
+            width:20px;
+            margin:0 10px;
+            background-color: transparent;
+        }
+        .model-5::before{
+            content:'';
+            position: absolute;
+            top:5px;
+            left:0;
+            width:100%;
+            height: 35px;
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);
+            z-index:-1;
+        }
+        .model-5 li:first-child a,.model-5 li:last-child a{
+          color:#1E7EE2;
+        }
+
+        .model-5 li a.active{
+            background-color: #1E7EE2;
+            position: relative;
+            top:-2px;
+        }
+        .model-5 a.active::before{
+            content: "";
+            position: absolute;
+            top:1px;
+            left:-5px;
+            border:5px solid #1E7EE2;
+            border-color:transparent transparent transparent rgba(0, 0, 255, 0.404);
+            transform: rotate(45deg);
+        }
+        .model-5 a.active::after{
+            content: "";
+            position: absolute;
+            top:1px;
+            right:-6px;
+            border:5px solid #1E7EE2;
+            border-color:transparent transparent transparent rgba(0, 0, 255, 0.404);
+            transform: rotate(135deg);
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="pagination model-1">
+        <li><a href="1">&laquo</a> </li>
+        <li ><a class="active">1</a></li>
+        <li><a href="1">2</a></li>
+        <li><a href="1">3</a></li>
+        <li><a href="1">4</a></li>
+        <li><a href="1">5</a></li>
+        <li><a href="1">&raquo</a></li>
+    </ul>
+     <br>
+    <ul class="pagination model-2">
+        <li><a href="1">&laquo</a> </li>
+        <li ><a class="">1</a></li>
+        <li><a href="1" class="active">2</a></li>
+        <li><a href="1">3</a></li>
+        <li><a href="1">4</a></li>
+        <li><a href="1">5</a></li>
+        <li><a href="1">&raquo</a></li>
+    </ul>
+    <br>
+    <ul class="pagination model-3">
+        <li><a href="1">&laquo</a> </li>
+        <li ><a class="">1</a></li>
+        <li><a href="1" class="active">2</a></li>
+        <li><a href="1">3</a></li>
+        <li><a href="1">4</a></li>
+        <li><a href="1">5</a></li>
+        <li><a href="1">&raquo</a></li>
+    </ul>
+    <br>
+    <ul class="pagination model-4">
+        <li><a href="1">&laquo previous</a> </li>
+        <li ><a class="">1</a></li>
+        <li><a href="1" class="active">2</a></li>
+        <li><a href="1">3</a></li>
+        <li><a href="1">4</a></li>
+        <li><a href="1">5</a></li>
+        <li><a href="1">newxt &raquo </a></li>
+    </ul>
+    <br>
+    <ul class="pagination model-5">
+        <li><a href="1">&laquo</a> </li>
+        <li ><a class="">1</a></li>
+        <li><a href="1" class="active">2</a></li>
+        <li><a href="1">3</a></li>
+        <li><a href="1">4</a></li>
+        <li><a href="1">5</a></li>
+        <li><a href="1"> &raquo </a></li>
+    </ul>
+</body>
+</html>

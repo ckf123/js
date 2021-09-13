@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,p,body{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            justify-content: space-between;
+        }
+        .container .col{
+            background-color: pink;
+            margin-left:10px
+        }
+        .col.span1{
+            flex:4;
+        }
+        .col.span2{
+            flex:5;
+        }
+
+          h1{
+              font-size:6vw;
+          }  
+          p{
+
+          }
+          /* 
+           @media media-type and (media-feature-rule) {
+             CSS rules go here
+            与或非  and  ,分隔 not
+          一个媒体类型 */
+          @media (max-width:800px) {
+              h1{
+                  font-size:4rem;
+              }
+              .container{
+                  display: flex;
+              }
+          }  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col span1">
+            <h1>Watch my size</h1>
+            <p>
+                this layout is responsive .See whathappens if you make the brwser
+                window wider or narrow
+            </p>
+        </div>
+        <div class="col span2">
+            <p>这在宽屏设备上效果很好，例如笔记本电脑或台式机（您可以 现场观看示例 并找到 源代码 在 Github 上。）我们不会在本课中过多讨论 CSS，除了说：
+                正文内容的最大宽度设置为 1200 像素——在高于该宽度的视口中，正文保持在 1200 像素并在可用空间中居中。在低于该宽度的视口中，主体将保持在视口宽度的 100% 处。下面的标题看起来不错，但它开始占据移动设备的大量屏幕高度。并且在这种尺寸下，很难看到第一张内容图像中的人物。
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>

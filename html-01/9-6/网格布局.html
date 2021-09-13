@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        目标了解网格布局系统背后的基本概念---以及如何在一个网页实现一个网格布局 
+         列(column) 
+         行(row)
+         行与行列与列之间空隙为沟槽(gutter)
+         grid-template-columns ---分配列的宽度  简写形式 repeat(3,1fr)
+    -->
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container{
+            display:grid;
+            /* grid-template-columns: 1fr 2fr 1fr;   */
+               grid-template-columns:repeat(auto-fill,minmax(300,1fr));
+               grid-gap: 0px;
+               grid-template-areas: "one  one ." 
+                                    "two  five ."
+                                     "four three three"
+                                    ;
+        }
+       .container div{       
+            /* width:80%; */
+            height:50px;
+            /* margin:0 auto; */
+            border: 1px solid #fff;
+            line-height: 50px;
+            background-color: blueviolet;
+        }
+        .one{
+            grid-area: one;
+        }
+        .two{
+            grid-area: two;
+        }
+        .three{
+            grid-area:three;
+        }
+        .four{
+            grid-area:four;
+        }
+        .five{
+            grid-area:five;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simplle grid example</h1>
+    <div class="container">
+        
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+        <div class="four">four</div>
+        <div class="five">five</div>
+        <!-- <div>six</div>
+        <div>seaven</div> -->
+    </div>
+
+</body>
+</html>
